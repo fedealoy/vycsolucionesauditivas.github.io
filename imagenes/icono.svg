@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="barras" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="62" y2="0">
+      <stop offset="0" stop-color="#4a7a67"/>
+      <stop offset="1" stop-color="#b9a3d9"/>
+    </linearGradient>
+  </defs>
+  <path d="M41 6.5A25 25 0 1 0 13 52" fill="none" stroke="#4a7a67" stroke-width="3" stroke-linecap="round"/>
+  <path d="M37 22c0-8-6-13.5-13-13.5S11 14 11 22c0 6 3.5 9 5.5 12 2 2.8 2.5 5.5 2.5 8.5 0 5 3.6 8.5 8 8.5s7.5-3 7.5-6.5" fill="none" stroke="#0b1f45" stroke-width="5" stroke-linecap="round"/>
+  <path d="M29.5 23c0-3.6-2.4-6.3-5.5-6.3S18.5 19.4 18.5 23c0 3.2 2.2 4.6 4.5 5.4" fill="none" stroke="#0b1f45" stroke-width="4" stroke-linecap="round"/>
+  <g stroke="url(#barras)" stroke-width="3.2" stroke-linecap="round">
+    <path d="M41 23v8M46 18v18M51 14v26M56 19v16M61 24v6"/>
+  </g>
+</svg>

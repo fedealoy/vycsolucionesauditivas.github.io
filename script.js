@@ -8,7 +8,7 @@ const CONFIG = {
   // Tu número de WhatsApp: código de país + código de área + número.
   // SIN el signo +, SIN espacios, SIN guiones, SIN el 0 ni el 15.
   // Ejemplo Argentina (celular): 54 + 9 + 351 + 1234567  ->  "5493511234567"
-  whatsapp: "5491167088506",
+  whatsapp: "5491139404897",
 
   // Mensaje que aparece escrito cuando el cliente abre el chat
   mensajeWhatsapp: "Hola VYC Soluciones Auditivas, quisiera hacer una consulta.",

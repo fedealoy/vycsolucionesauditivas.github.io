@@ -9,7 +9,9 @@
   <!-- Tipografía (letra) moderna y fácil de leer -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Montserrat:wght@500;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <!-- Ícono que aparece en la pestaña del navegador -->
+  <link rel="icon" href="imagenes/icono.svg" type="image/svg+xml">
   <!-- Conecta el archivo de diseño -->
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -22,9 +24,9 @@
   <div class="barra-top">
     <div class="contenedor barra-top__inner">
       <!-- ✏️ Cambiá teléfono, email y horario -->
-      <span>📞 <a href="tel:+5491167088506">+54 9 000 000-0000</a></span>
-      <span>✉️ <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></span>
-      <span class="ocultar-movil">🕒 Lunes a Viernes 9 a 18 h</span>
+      <span>📞 <a href="tel:+5491139404897">11 3940-4897</a></span>
+      <span>✉️ <a href="mailto:fedealoy6@gmail.com">fedealoy6@gmail.com</a></span>
+      <span class="ocultar-movil">🕒 Lun a Vie 9 a 18 h · Sáb 9 a 14 h</span>
     </div>
   </div>
 
@@ -32,11 +34,14 @@
   <header class="header" id="header">
     <div class="contenedor header__inner">
       <a href="#inicio" class="logo" aria-label="VYC Soluciones Auditivas, ir al inicio">
-        <!-- ✏️ Si tenés logo, reemplazá este bloque por: <img src="imagenes/logo.png" alt="VYC Soluciones Auditivas" height="48"> -->
-        <span class="logo__icono" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="24" fill="#0b5ea8"/><path d="M22 13c-6 0-10 4.5-10 10 0 3.5 1.6 5.5 3.2 7.4 1.4 1.7 1.9 3.2 1.9 5.4 0 2.6 2 4.5 4.5 4.5s4.2-1.6 4.2-3.8" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/><path d="M31 18c2 2.4 2 7 0 9.4M35 15c3.6 4 3.6 11 0 15" fill="none" stroke="#7fd3ff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <!-- ✏️ LOGO: ícono (archivo imagenes/icono.svg) + nombre escrito con la tipografía de la marca.
+             Cuando consigas el PNG original, reemplazá estas líneas por:
+             <img src="imagenes/logo.png" alt="VYC Soluciones Auditivas" height="56"> -->
+        <img src="imagenes/icono.svg" alt="" class="logo__icono" width="52" height="52">
+        <span class="logo__texto">
+          <span class="logo__vyc">V<span class="verde">Y</span>C</span>
+          <span class="logo__sub">Soluciones Auditivas</span>
         </span>
-        <span class="logo__texto"><strong>VYC</strong> Soluciones Auditivas</span>
       </a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
@@ -59,33 +64,34 @@
     <section class="hero" id="inicio">
       <div class="contenedor hero__inner">
         <div class="hero__texto">
-          <p class="etiqueta">Salud auditiva profesional</p>
+          <p class="etiqueta">Vivir y conectar</p>
           <!-- ✏️ Título principal -->
-          <h1>Volvé a disfrutar de cada sonido</h1>
+          <h1>Escuchar mejor <span class="verde">también es conectar mejor.</span></h1>
           <p class="hero__bajada">
+            En <strong>VYC</strong> encontramos la solución auditiva que se adapta a vos.
             Te acompañamos en todo el proceso: estudio de tu audición, elección del audífono ideal,
-            adaptación y seguimiento. Atención cercana, para vos y tu familia.
+            adaptación y seguimiento.
           </p>
           <div class="hero__botones">
             <a href="#contacto" class="btn">Contactanos</a>
             <a href="#catalogo" class="btn btn--borde">Ver audífonos</a>
           </div>
           <ul class="hero__puntos">
-            <li>✔ Atención personalizada</li>
-            <li>✔ Prueba de audífonos</li>
-            <li>✔ Seguimiento post venta</li>
+            <li><span aria-hidden="true">👂</span> Asesoramiento personalizado</li>
+            <li><span aria-hidden="true">⚙️</span> Tecnología de última generación</li>
+            <li><span aria-hidden="true">💜</span> Mejora en tu calidad de vida</li>
           </ul>
         </div>
         <div class="hero__imagen" aria-hidden="true">
-          <!-- Ilustración decorativa de ondas de sonido -->
+          <!-- Ilustración decorativa con los colores de la marca -->
           <svg viewBox="0 0 400 400" class="ondas">
-            <circle cx="200" cy="200" r="70" fill="#ffffff" opacity=".95"/>
-            <circle cx="200" cy="200" r="110" fill="none" stroke="#ffffff" stroke-width="3" opacity=".55"/>
-            <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff" stroke-width="3" opacity=".35"/>
-            <circle cx="200" cy="200" r="190" fill="none" stroke="#ffffff" stroke-width="3" opacity=".18"/>
-            <path d="M192 160c-22 0-36 16-36 36 0 13 6 20 12 27 5 6 7 12 7 20 0 9 7 16 16 16s15-6 15-14" fill="none" stroke="#0b5ea8" stroke-width="9" stroke-linecap="round"/>
-            <path d="M226 178c7 9 7 26 0 35M240 168c13 15 13 41 0 56" fill="none" stroke="#2ba3e0" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="200" cy="200" r="70" fill="#ffffff"/>
+            <circle cx="200" cy="200" r="110" fill="none" stroke="#4a7a67" stroke-width="3" opacity=".45"/>
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#b9a3d9" stroke-width="3" opacity=".55"/>
+            <circle cx="200" cy="200" r="190" fill="none" stroke="#b9a3d9" stroke-width="3" opacity=".3"/>
+            <image href="imagenes/icono.svg" x="140" y="140" width="120" height="120"/>
           </svg>
+          <p class="hero__firma">Tu audición, nuestro compromiso.</p>
         </div>
       </div>
     </section>
@@ -320,8 +326,8 @@
             <ul class="datos">
               <!-- ✏️ Cambiá tus datos reales -->
               <li><span aria-hidden="true">📍</span><div><strong>Dirección</strong><br>Calle Ejemplo 123, Ciudad, Provincia</div></li>
-              <li><span aria-hidden="true">🕒</span><div><strong>Horarios</strong><br>Lunes a Viernes de 9 a 18 h</div></li>
-              <li><span aria-hidden="true">📞</span><div><strong>Teléfono</strong><br><a href="tel:+5491167088506">+54 9 000 000-0000</a></div></li>
+              <li><span aria-hidden="true">🕒</span><div><strong>Horarios</strong><br>Lunes a Viernes de 9 a 18 hs<br>Sábados de 9 a 14 hs</div></li>
+              <li><span aria-hidden="true">📞</span><div><strong>Teléfono / WhatsApp</strong><br><a href="tel:+5491139404897">11 3940-4897</a></div></li>
               <li><span aria-hidden="true">📷</span><div><strong>Instagram</strong><br><a href="https://www.instagram.com/vycsolucionesauditivas/" target="_blank" rel="noopener">@vycsolucionesauditivas</a></div></li>
             </ul>
             <div class="mapa">
@@ -342,7 +348,7 @@
     <div class="contenedor footer__inner">
       <div>
         <p class="footer__marca"><strong>VYC</strong> Soluciones Auditivas</p>
-        <p>Cuidamos tu audición con profesionalismo y calidez.</p>
+        <p>Vivir y conectar. Tu audición, nuestro compromiso.</p>
       </div>
       <nav aria-label="Enlaces del pie">
         <a href="#nosotros">Quiénes Somos</a>
