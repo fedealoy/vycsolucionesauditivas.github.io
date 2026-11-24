@@ -25,8 +25,12 @@ function linkWhatsapp(texto) {
   return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(texto);
 }
 
-// 1) Botón flotante de WhatsApp
-document.getElementById("whatsappFlotante").href = linkWhatsapp(CONFIG.mensajeWhatsapp);
+// 1) Botones de WhatsApp (el flotante y el de la portada)
+document.querySelectorAll(".js-whatsapp").forEach(function (boton) {
+  boton.href = linkWhatsapp(CONFIG.mensajeWhatsapp);
+  boton.target = "_blank";
+  boton.rel = "noopener";
+});
 
 // 2) Botones "Consultar" del catálogo: abren WhatsApp con el modelo escrito
 document.querySelectorAll(".consultar").forEach(function (boton) {
@@ -63,8 +67,9 @@ const filtros = document.querySelectorAll(".filtro");
 const productos = document.querySelectorAll(".producto");
 filtros.forEach(function (filtro) {
   filtro.addEventListener("click", function () {
-    filtros.forEach(function (f) { f.classList.remove("activo"); });
+    filtros.forEach(function (f) { f.classList.remove("activo"); f.setAttribute("aria-pressed", "false"); });
     filtro.classList.add("activo");
+    filtro.setAttribute("aria-pressed", "true");
     const elegido = filtro.dataset.filtro;
     productos.forEach(function (p) {
       const tipos = p.dataset.tipo.split(" ");
@@ -121,20 +126,3 @@ formulario.addEventListener("submit", async function (evento) {
 
 // 7) Año actual en el pie de página
 document.getElementById("anio").textContent = new Date().getFullYear();
-
-// 8) Animación suave de las tarjetas al aparecer en pantalla
-if ("IntersectionObserver" in window) {
-  const elementos = document.querySelectorAll(".tarjeta, .producto, .valor, .pasos li");
-  const observador = new IntersectionObserver(function (entradas) {
-    entradas.forEach(function (entrada) {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add("visible");
-        observador.unobserve(entrada.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  elementos.forEach(function (el) {
-    el.classList.add("aparecer");
-    observador.observe(el);
-  });
-}
